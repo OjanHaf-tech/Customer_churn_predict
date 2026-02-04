@@ -237,7 +237,7 @@ with container4:
     with col2:
         total_charge = st.number_input(
             'Total Charge',
-            min_value=18.0,
+            min_value=monthly_charge,
             max_value=8685.0,
             step=10.0,
             format='%.2f',
@@ -327,5 +327,6 @@ if st.button('Predict'):
             title='Customer Churn Probability Distribution',
             legend_title='Outcome',
         )
+
 
         st.plotly_chart(fig, use_container_width=True)
