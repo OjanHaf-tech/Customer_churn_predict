@@ -95,11 +95,14 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-tenure = st.slider(
+tenure = st.number_input(
     'Tenure (months)',
-    0, 72,
+    min_value=0,
+    max_value=72,
+    step=1,
     help='Number of months the customer has stayed with the company.'
 )
+st.caption("Tenure range: 0-72")
 
 container3 = st.container(border=True)
 
@@ -329,6 +332,4 @@ if st.button('Predict'):
             legend_title='Outcome',
         )
 
-
         st.plotly_chart(fig, use_container_width=True)
-
