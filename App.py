@@ -243,7 +243,7 @@ with container4:
             format='%.2f',
             help='Total amount billed to the customer so far.'
         )
-    st.caption("Total Charge must be equal to or greater than Monthly Charge.")
+    st.caption("Total Charge can't be less than Monthly Charge.")
 
 actual_charges = monthly_charge * tenure
 
